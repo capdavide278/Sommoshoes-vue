@@ -2,6 +2,7 @@
 /* import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue' */
 import Header from './components/Header.vue'
+import HeroSection from './components/HeroSection.vue';
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import Header from './components/Header.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <HeroSection></HeroSection>
   </main>
 </template>
 
