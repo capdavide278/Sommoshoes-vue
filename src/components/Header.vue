@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div id="menu-container">
-            <img src="../components/icons/- Sommo_Shoes -.png" alt="sfondo scarpe gialle" class="logo">
+            <img src="../components/icons/sommoshoes.png" alt="sfondo scarpe gialle" class="logo">
             <button class="menu-attivo" @click="toggleMenu">
                 <div>
                     <img src="../components/icons/comment-alt-solid.svg" alt="icona_menu" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -56,7 +56,7 @@ export default {
 }
 
 .logo{
-    margin-top: 100px;
+    margin-top: 150px;
     height: 317px;
 }
 
