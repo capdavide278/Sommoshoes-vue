@@ -1,22 +1,26 @@
 <script setup>
 /* import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue' */
+import { useRoute } from 'vue-router';
 import Header from './components/Header.vue'
 import HeroSection from './components/HeroSection.vue';
 import Footer from './components/Footer.vue';
+
+const route=useRoute()
 </script>
 
 <template>
   <header>
-    <router-link to="/prodotti"><Header></Header></router-link>
+    <Header></Header>
   </header>
 
   <main>
-    <HeroSection></HeroSection>
+    <HeroSection v-if="route.path === '/'"></HeroSection>
+    <router-view></router-view>
   </main>
 
   <footer>
-    <Footer></Footer>
+    <Footer v-if="route.path === '/'"></Footer>
   </footer>
 </template>
 

@@ -9,10 +9,15 @@
             </button>
             <nav class="nav-menu" :class="{ active: isMenuOpen, off: !isMenuOpen }">
                 <ul>
-                    <li><a href="#">Home</a></li>
+<!--                     <li><a href="#">Home</a></li>
                     <li><a href="#">Prodotti</a></li>
                     <li><a href="#">Info</a></li>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">Contatti</a></li> -->
+
+                    <li><router-link to="/">Home</router-link></li>
+                    <li><router-link to="/prodotti">Prodotti</router-link></li>
+                    <li><router-link to="/info">Info</router-link></li>
+                    <li><router-link to="/contatti">Contatti</router-link></li>
                 </ul>
             </nav>
         </div>

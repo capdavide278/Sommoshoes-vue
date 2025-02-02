@@ -3,7 +3,7 @@
             <div class="hero-testo">
                 <h1 style="font-size: 40px;">Portici nuova capitale della moda indiscussa: <span style="font-size: 40px;color:#f9b226;">SommoShoes</span></h1>
                 <p>I nostri prodotti fatti a mano da bambini cinesi, trasportati dalla cina fino a portici</p>
-                <a href="#" class="btn-products">Prodotti</a>
+                <router-link to="/prodotti" class="btn-products">Prodotti</router-link>
             </div>
             <div>
                 <img class="hero_img" src="../components/icons/sommo shoes.jpg" alt="scarpe">
@@ -227,3 +227,14 @@
     opacity: 1;
 }
 </style>
+
+<!-- <script>
+export default{
+    methods:{
+    prodotti(){
+        console.log("Navigazione verso /prodotti");
+        this.$router.push('/prodotti').catch(err => console.warn(err));
+    }
+  }
+}
+</script> -->
