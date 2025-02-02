@@ -3,6 +3,7 @@
 import TheWelcome from './components/TheWelcome.vue' */
 import Header from './components/Header.vue'
 import HeroSection from './components/HeroSection.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -13,6 +14,10 @@ import HeroSection from './components/HeroSection.vue';
   <main>
     <HeroSection></HeroSection>
   </main>
+
+  <footer>
+    <Footer></Footer>
+  </footer>
 </template>
 
 <style>
