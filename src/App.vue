@@ -8,7 +8,7 @@ import Footer from './components/Footer.vue';
 
 <template>
   <header>
-    <Header></Header>
+    <router-link to="/prodotti"><Header></Header></router-link>
   </header>
 
   <main>
