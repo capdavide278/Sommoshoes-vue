@@ -11,7 +11,7 @@ const route=useRoute()
 
 <template>
   <header>
-    <Header></Header>
+    <Header v-if="route.path === '/'"></Header>
   </header>
 
   <main>
