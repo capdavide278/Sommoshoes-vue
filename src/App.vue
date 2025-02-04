@@ -20,7 +20,7 @@ const route=useRoute()
   </main>
 
   <footer>
-    <Footer v-if="route.path === '/'"></Footer>
+    <Footer></Footer>
   </footer>
 </template>
 
