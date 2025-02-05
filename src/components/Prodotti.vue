@@ -97,8 +97,8 @@ const search = computed({
     top: 0;
     left: 20px;
     width: 220px;
-    height: 3px; 
-    background: black;
+    height: 1px; 
+    background: rgb(71, 63, 63);
     border-radius: 2px;
 }
 
