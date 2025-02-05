@@ -27,9 +27,10 @@
             </ul>
         </div>
         <div class="container-scarpe">
-            <div v-for="prodotto in prodotti" :key='prodotto.nome' class="container-prodotto">
+            <div v-for="prodotto in prodotti" :key='prodotto.nome' style="margin-bottom: 125px;">
                 <img :src="prodotto.image" class="img-scarpa">
-                <h1>{{ prodotto.nome }}</h1>
+                <h2 style="color:#1f4967; font-size: 27px;">{{ prodotto.nome }}</h2>
+                <h4 style="color:dimgrey;">{{ prodotto.genere }}</h4>
                 <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
             </div>
         </div>
@@ -117,22 +118,23 @@ nav ul>li{
     width: 360px;
     border-radius: 5px;
     filter: drop-shadow(0 0 0.95rem rgb(255, 255, 255));
-    animation-duration: 1.5s;
-    animation-name: brilla;
     cursor: pointer;
 }
 
 .img-scarpa:hover{
-    animation: 1.5s linear 1.5s infinite alternate brilla;
+    animation-duration: 1.5s;
+    animation-name: brilla;
+    animation-fill-mode: forwards;
 }
 
 @keyframes brilla{
-    from{ filter: drop-shadow(0 0 0.90rem rgba(250,177,36,255));}
-    to{filter: drop-shadow(0 0 0.90 rgba(250,177,36,255));}
+    from{ filter: drop-shadow(0 0 0.75rem rgba(250,177,36,255));}
+    to{filter: drop-shadow(0 0 1.1rem rgba(250,177,36,255));}
 }
 
 .container-scarpe{
     display: grid;
     grid-template-columns: auto auto auto;
+    padding: 25px;
 }
 </style>
