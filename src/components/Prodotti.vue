@@ -26,7 +26,7 @@
                 <li class="filter">Scontate</li>
             </ul>
         </div>
-        <div v-for="prodotto in prodotti" :key='prodotto.nome'>
+        <div v-for="prodotto in prodotti" :key='prodotto.nome' class="container-prodotto">
             <img :src="prodotto.image" class="img-scarpa">
             <h1>{{ prodotto.nome }}</h1>
             <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
@@ -111,5 +111,8 @@ nav ul>li{
 
 .img-scarpa{
     height: 360px;
+    width: 360px;
 }
+
+
 </style>
