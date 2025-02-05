@@ -58,4 +58,16 @@ export const prodotti=[
         prezzo: 56,
         image:'src/assets/canva-ai-img/scarpa-anime.jpg'
     },
+
+    {
+        nome:'Classic-shoes',
+        prezzo: 56,
+        image:'src/assets/canva-ai-img/classica.jpg'
+    },
+
+    {
+        nome:'Classic-shoes',
+        prezzo: 56,
+        image:'src/assets/canva-ai-img/red-flag.jpg'
+    },
 ] 

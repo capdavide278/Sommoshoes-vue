@@ -26,10 +26,12 @@
                 <li class="filter">Scontate</li>
             </ul>
         </div>
-        <div v-for="prodotto in prodotti" :key='prodotto.nome' class="container-prodotto">
-            <img :src="prodotto.image" class="img-scarpa">
-            <h1>{{ prodotto.nome }}</h1>
-            <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
+        <div class="container-scarpe">
+            <div v-for="prodotto in prodotti" :key='prodotto.nome' class="container-prodotto">
+                <img :src="prodotto.image" class="img-scarpa">
+                <h1>{{ prodotto.nome }}</h1>
+                <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
+            </div>
         </div>
     </div>
 </template>
@@ -89,6 +91,7 @@ const search = computed({
 .filter {
     position: relative;
     padding-left: 60px;
+    color: #1f4967;
 }
 
 .filter::after {
@@ -112,7 +115,24 @@ nav ul>li{
 .img-scarpa{
     height: 360px;
     width: 360px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 0.95rem rgb(255, 255, 255));
+    animation-duration: 1.5s;
+    animation-name: brilla;
+    cursor: pointer;
 }
 
+.img-scarpa:hover{
+    animation: 1.5s linear 1.5s infinite alternate brilla;
+}
 
+@keyframes brilla{
+    from{ filter: drop-shadow(0 0 0.90rem rgba(250,177,36,255));}
+    to{filter: drop-shadow(0 0 0.90 rgba(250,177,36,255));}
+}
+
+.container-scarpe{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
 </style>
