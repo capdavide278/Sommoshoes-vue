@@ -36,9 +36,9 @@ export const prodotti=[
     },
 
     {
-        nome:'Normy',
+        nome:'SommoCalcio',
         prezzo: 56,
-        image:'src/assets/canva-ai-img/scarpa.jpg'
+        image:'src/assets/canva-ai-img/scarpa-sport.jpg'
     },
 
     {
