@@ -26,13 +26,16 @@
                 <li class="filter">Scontate</li>
             </ul>
         </div>
-        <div>
-            <h1>Qui vanno inserite le foto</h1>
+        <div v-for="prodotto in prodotti" :key='prodotto.nome'>
+            <img :src="prodotto.image" class="img-scarpa">
+            <h1>{{ prodotto.nome }}</h1>
+            <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
         </div>
     </div>
 </template>
 
 <script setup>
+import {prodotti} from '../prodotti.js'
 import {computed} from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 
@@ -46,7 +49,11 @@ const search = computed({
     set(search){
         router.replace({query: {search}})
     }
-})
+});
+
+
+
+
 </script>
 
 <style scoped>
@@ -90,8 +97,9 @@ const search = computed({
     top: 0;
     left: 20px;
     width: 220px;
-    height: 1px; 
+    height: 3px; 
     background: black;
+    border-radius: 2px;
 }
 
 nav ul>li{
@@ -99,5 +107,9 @@ nav ul>li{
     display: inline;
     color: #f9b226;
     padding: 10px;
+}
+
+.img-scarpa{
+    height: 360px;
 }
 </style>
