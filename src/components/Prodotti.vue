@@ -10,7 +10,7 @@
             </nav>
             <img src="../components/icons/sommoshoes.png" alt="sfondo scarpe gialle" class="logo">
             <div>
-                <h1 style="color: white;">qua ci va la barra cerca con il carrello</h1>
+                <input type="text" v-model="search" placeholder="Cerca SommaScarpa...">
             </div>
         </div>
     </div>
@@ -27,11 +27,11 @@
             </ul>
         </div>
         <div class="container-scarpe">
-            <div v-for="prodotto in prodotti" :key='prodotto.nome' style="margin-bottom: 125px;">
+            <div v-for="prodotto in prodottiFiltrati" :key='prodotto.nome' style="margin-bottom: 125px;">
                 <img :src="prodotto.image" class="img-scarpa">
                 <h2 style="color:#1f4967; font-size: 27px;">{{ prodotto.nome }}</h2>
-                <h4 style="color:dimgrey;">{{ prodotto.genere }}</h4>
-                <h3>Prezzo: {{ prodotto.prezzo }}€</h3>
+                <h3 style="color:dimgrey;font-size: 20px;">{{ prodotto.genere }}</h3>
+                <h3 style="font-size: 20px;">Prezzo: {{ prodotto.prezzo }}€</h3>
             </div>
         </div>
     </div>
@@ -54,12 +54,26 @@ const search = computed({
     }
 });
 
-
+const prodottiFiltrati = computed(() =>{
+    const searchTerm = search.value.toLowerCase()
+    return prodotti.filter(prodotto =>{
+        const nome = prodotto.nome.toLowerCase()
+        const genere = prodotto.genere.toLowerCase()
+        return nome.includes(searchTerm) || genere.includes(searchTerm)
+    })
+})
 
 
 </script>
 
 <style scoped>
+input[type="text"]{
+    border: hidden;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .logo-prodotti{
     height: 150px;
     background-color: white;
